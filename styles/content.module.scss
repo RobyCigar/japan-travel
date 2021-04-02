@@ -1,0 +1,50 @@
+@use "./vars.module" as var;
+
+.container {
+	display: flex;
+	margin: 80px 30px;
+	justify-content: center;
+}
+
+.text {
+	margin: 10px;
+	padding: 30px;
+	width: 80%;
+	h2 {
+		font-weight: 700;
+		font-size: 32px;
+		color: #BF0000;
+	}
+	p {
+		font-size: 18px;
+		margin: 10px 0;
+	}
+
+	button {
+		padding: 15px 20px;
+		background: var.$blue;
+		color: white;
+		font-weight: 700;
+		font-size: 17px;
+		border: 2px solid var.$blue;
+		border-radius: 7px;
+		cursor: pointer;
+		text-transform: uppercase;
+		margin: 20px 0;
+		@include var.transition(0.12s, ease-in-out);
+	}
+
+	button:hover {
+		background: none;
+		color: var.$blue;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.container {
+		flex-direction: column !important;
+		.text {
+			width: 100%;
+		}
+	}
+}
