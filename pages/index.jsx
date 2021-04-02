@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
       <Banner />
       <Card />
-      <h1 style={style}>Our Destination</h1>
+      <h1 style={titleStyle}>Our Destination</h1>
       {data.map((val, i) => {
         return (
           <Content key={i} title={val.title} src={val.src} direction={val.direction ? val.direction : null} >
@@ -23,12 +23,18 @@ export default function Home() {
           </Content>
         )
       })}
+      <h5 style={textStyle}>Design by Ajm, coded by Roby</h5>
     </div>
   );
 }
 
+const textStyle = {
+  textAlign: 'center',
+  fontWeight: 600,
+  color: 'purple'
+}
 
-const style = {
+const titleStyle = {
   color: "#295B8B",
   textAlign: "center",
   marginTop: 90,
